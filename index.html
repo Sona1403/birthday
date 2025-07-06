@@ -1,0 +1,35 @@
+<!-- fantasy-romantic-birthday-surprise -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Lipiiiii</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+  <section class="intro">
+    <h1>Happy Birthday, Our Queen 👑</h1>
+    <p>Click below to enter your magical surprise ✨</p>
+    <button id="sneakyBtn" onclick="startSurprise()">Begin the Journey 💖</button>
+    <p id="funnyText" class="funny-message"></p>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="video-wrapper" id="videoWrap">
+      <video id="surpriseVideo" controls>
+        <source src="birthday.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="final-message" id="finalMessage"></p>
+    <p class="quote" id="quote">“Your heart holds more warmth than a thousand sunrises.” ✨</p>
+  </section>
+
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+  <audio id="boingSound" src="https://www.soundjay.com/button/beep-07.mp3" preload="auto"></audio>
+
+  <script src="birthday.js"></script>
+</body>
+</html>

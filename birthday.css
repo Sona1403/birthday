@@ -1,0 +1,168 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+    }
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background: radial-gradient(ellipse at bottom, #ffe6f0 0%, #ffb3c6 100%);
+      animation: fadeIn 2s ease;
+    }
+    h1 {
+      font-size: 3em;
+      font-family: 'Great Vibes', cursive;
+      color: #c2185b;
+      text-shadow: 2px 2px 4px #fff;
+    }
+    p {
+      font-size: 1.4em;
+      margin: 20px 0;
+    }
+    #sneakyBtn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    #sneakyBtn:hover {
+      background: #ad1457;
+    }
+    .funny-message {
+      margin-top: 15px;
+      color: #880e4f;
+      font-style: italic;
+      animation: fadeIn 0.5s;
+    }
+    .gallery {
+      display: none;
+      background: #000;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      animation: popIn 0.8s ease forwards;
+      transform: scale(0);
+      position: relative;
+    }
+    video {
+      width: auto;
+      height: 100%;
+      max-height: 100vh;
+      max-width: 100vw;
+      object-fit: contain;
+    }
+    .mid-message {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      background-color: #fffafc;
+    }
+    #miniText {
+      font-size: 1.4em;
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      font-weight: 500;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .final-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff0f5;
+      padding: 30px 20px;
+    }
+    .final-message,
+    .quote {
+      display: none;
+      text-align: center;
+      padding: 0 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .final-message.show,
+    .quote.show {
+      display: block;
+    }
+    .final-message {
+      font-size: 1.6em;
+      font-family: 'Great Vibes', cursive;
+      color: #ad1457;
+      animation: fadeIn 2s ease-in;
+      max-width: 80vw;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    .quote {
+      font-size: 1.2em;
+      color: #6a1b9a;
+      margin-top: 20px;
+      font-style: italic;
+      animation: fadeIn 2s ease-in;
+      max-width: 80vw;
+      line-height: 1.6;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 10px;
+    }
+    #popperContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .popper {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #ff4081, #e040fb, #00e5ff, #00c853, #ffd600);
+      border-radius: 50%;
+      animation: popper-fall 1s ease-out forwards;
+    }
+    @keyframes popper-fall {
+      to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
